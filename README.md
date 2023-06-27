@@ -1,2 +1,3 @@
 # project.MA
-GA analysis
+RNA-seq data analysis in GA samples 
+
