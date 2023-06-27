@@ -1,0 +1,29 @@
+#########################
+##### GSEA analysis #####
+#########################
+rm(list = ls())
+options(stringsAsFactors =FALSE); options(scipen = 9999 ); options(repos='http://cran.rstudio.com/')
+inpkgs <- installed.packages()
+pkgs=c("readxl", "dplyr","reshape", "ggplot2", "gridExtra", "gplots",
+       "RColorBrewer", "ggrepel", "ggpubr", "ggvenn", 
+       "WGCNA", "clusterProfiler", "org.Hs.eg.db",
+       "ComplexHeatmap", "circlize", "dendextend" )
+unlist(lapply(pkgs, require, character.only = TRUE))
+
+#options("scipen"=-100, "digits"=3)
+#options(scipen = 999)
+
+##### PATH #####
+setwd("/Users/aychoi/OneDrive - GCCORP/Project/00.Analysis")
+resDir="./result/dex.MA_mRNA"
+wgcnaDir="./result/dex.MA_mRNA/WGCNA"
+
+datDir = sprintf("%s/HS.Lee_lab", resDir) 
+load(sprintf("%s/HS.Lee_lab/DEG_RData/mRNAseq.RData", resDir))
+load(sprintf("%s/HS.Lee_lab/DEG_RData/DEseq2.RData", resDir)) #str(resl)
+ls()
+
+
+
+
+  
